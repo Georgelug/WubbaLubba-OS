@@ -1,20 +1,26 @@
 #include <iostream>
+#include <cstring>
 using namespace std;
 
-#include <cmath>
-#include "src/miClase.h"
+void CLEAR(){
+    #ifdef _WIN32
+        system("cls");
+    #else
+        system("clear");
+    #endif
+}
+
+#include "src/ToolsAux.cpp"
+#include "src/usuario.cpp"
+#include "src/menu.cpp"
 
 int main(){
     
-    // funcion menu, la cual abre el menu principal
-    // menu();
-    
-    cout << "\n\n\tHola mundo, esto es jakass"<<endl;
-    
-    Circulo c(5);
-    c.showData();
+    system("pause");
+    CLEAR();
 
-    cout << "\n\n\tsale bye!"<<endl;
+    // funcion menu, la cual abre el menu principal
+    menu();
 
     return 0;
 }
