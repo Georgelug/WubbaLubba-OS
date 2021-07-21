@@ -23,7 +23,7 @@ class User{
             return this->usuarioValido;
         }
 
-        void setUsarioValido(bool userValido){
+        void setUsuarioValido(bool userValido){
             this->usuarioValido = userValido;
         }
 
@@ -58,13 +58,13 @@ class User{
     
     private:
         bool verificarUsuarioIncorrecto(string usuario){
-            return (usuario.empty() || !usuario.compare(getUser()))?
+            return (usuario.empty() || usuario.compare(getUser()) != 0)?
                 true:
                 false
             ;
         }
         bool verificarPswdIncorrecto(string pswd){
-            return (pswd.empty() || !pswd.compare(getPassword()))?
+            return (pswd.empty() || pswd.compare(getPassword()) != 0)?
                 true:
                 false
             ;
@@ -91,11 +91,11 @@ class User{
             cout << "\n\n\tConfirma el nuevo password: ";
             getline(cin,tmppswdConfirm);
 
-            while (tmppswd.empty() || tmppswdConfirm.empty() || !tmpuser.compare(tmppswdConfirm)){
+            while (tmppswd.empty() || tmppswdConfirm.empty() || tmppswd.compare(tmppswdConfirm)!= 0){
                 cin.ignore();
                 cout << "\n\n\tERROR, intentalo de nuevo\n\tIngresa un nuevo password: ";
                 getline(cin,tmppswd);
-
+                
                 cin.ignore();
                 cout << "\n\n\tConfirma el nuevo password: ";
                 getline(cin,tmppswdConfirm);
@@ -124,7 +124,7 @@ class User{
                 }
             }
 
-            return true
+            return true;
         }
 
         bool pedirPswd(){
@@ -145,6 +145,6 @@ class User{
                 }
             }
 
-            return true
+            return true;
         }
 };

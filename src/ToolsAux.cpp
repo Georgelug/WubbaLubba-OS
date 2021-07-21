@@ -3,53 +3,32 @@ class Herramientas{
         Herramientas(){}
 
         int verificar(int valorInicial, int valorFinal, string frase){
+            string tmp;
             int opc;
+            bool flag = true;
+
             CLEAR();
-            cin.ignore();
-            cout << frase <<endl;
-            cin >> opc;
-            while (opc < valorInicial || opc > valorFinal){
+            do{
+
+                cout << frase <<endl;
+                getline(cin,tmp);
+                try{
+                    opc = stoi(tmp);
+                    if(opc < valorInicial || opc > valorFinal) 
+                        throw exception();
+                    else
+                        flag = false;
+                }
+                catch(const std::exception& e){
+                    flag = true;
+                }
+
                 CLEAR();
-                cin.ignore();
-                cout <<"\n\n\tEror,intentalo de nuevo \n\n"<< frase <<endl;
-                cin >> opc;
-            }
+            } while (flag);
+            
+
+            return opc;
             
         } 
         
-        int checarBuffer(string buff){
-            char arr[2];
-            int i;
-            if(buff.empty())
-                return -1;
-
-            for ( i = 0; i < buff.lenght(); i++){
-                if(buff[i]!='-')
-                    arr[i] = buff[i];
-            }
-
-            return ((arr[0] == 'h') ? 
-                    0:
-                        (arr[0] == 'p') ?
-                        (arr[1] == 'e') ?
-                        1:
-                            (arr[1] == 'd') ?
-                            2:
-                                (arr[1] == 'p') ?
-                                3:
-                                    (arr[1] == 's') ?
-                                    4:
-                                        -1:-1);
-        }
-
-        void leerBuffer(string ruta){
-            string instruccion;
-            string salto = "\n";
-            do{
-                cin.ignore();
-                cout << ruta << ": ";
-                getline(cin,instruccion);
-            }while(instruccion.compare(salto))
-
-        }
 };
