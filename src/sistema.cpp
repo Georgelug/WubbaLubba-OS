@@ -2,18 +2,22 @@ class Sistema{
 
     
     public:
-        
+        MetodoMemoria programasVerificacion;
+
         Sistema(){}
         string Bienvenida(){
-            return "\n\n\tWubbaLubba-OS verion 1.0.0\n\n\tCopyleft 2021 Autor: Jorge Luis Esparza Fuentes\n\n\tEl uso de este sistema operativo queda libre a todo usuario sin fines de lucro\n\nqueda prohibida su venta o distribucion";
+            return "\n\n\t\aWubbaLubba-OS verion 1.0.0\n\nCopyleft 2021 Autor: Jorge Luis Esparza Fuentes\n\nEl uso de este sistema operativo queda libre a todo usuario sin fines de lucro\n\nqueda prohibida su venta o distribucion\n\n";
         }
 
         string Instrucciones(){
-            return "clear: limpiar pantalla\n\nh: instrucciones\n\np: ejecutar programa (por el momento solo se puede ejecutar la verificacion de los metodos de administracion de memoria)\n\n\t se puede agregar las siguientes opciones:\n\n\te: verificar particionamiento estatico\n\n\td: verificar particionamiento dinamico\n\n\tp: verificar paginacion\n\n\ts: verificar segmentacion\n\n\tEjemplo de uso: W => Users => thisUser: p-p (en este caso se ejecuta el programa verificar paginacion)\n\nNOTA: por lo el momento solo estan disponibles esas instrucciones para esta version de WubbaLubba-OS ya que es solo una demo \n\n\n";
+            return "\n\n################################\n\nclear: limpiar pantalla\n\nh: instrucciones\n\np: ejecutar programa (por el momento solo se puede ejecutar la verificacion de los metodos de administracion de memoria).\n\nSe puede agregar las siguientes opciones:\n\n\te: verificar particionamiento estatico\n\n\td: verificar particionamiento dinamico\n\n\tp: verificar paginacion\n\n\ts: verificar segmentacion\n\n\tEjemplo de uso: W => Users => thisUser: p-p (en este caso se ejecuta el programa verificar paginacion)\n\nNOTA: por lo el momento solo estan disponibles esas instrucciones para esta version de WubbaLubba-OS ya que es solo una demo \n\n\n";
         }
 
         int checarBuffer(string buff){
             int pos;
+
+            if (buff.compare("clear")== 0)
+                return -3;
             if (buff.compare("exit")== 0)
                 return -2;
             if(buff.empty() || buff.compare("p")== 0 || buff.compare(" ") == 0)
@@ -78,6 +82,11 @@ class Sistema{
                     if(!llamarFuncionesOpc(opciones)){
                         cout << "\nERROR, comando incorrecto" << endl;
                     }
+
+                    if(instruccion.compare("clear") == 0){
+                        CLEAR();
+                    }
+
                     if(instruccion.compare("exit") == 0)
                         break;
                 }

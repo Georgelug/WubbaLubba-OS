@@ -10,9 +10,10 @@ void CLEAR(){
     #endif
 }
 
-#include "src/sistema.cpp"
 #include "src/ToolsAux.cpp"
 #include "src/usuario.cpp"
+#include "src/metodosMemoria.cpp" 
+#include "src/sistema.cpp"
 #include "src/menu.cpp"
 
 int main(){
