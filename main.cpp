@@ -1,5 +1,7 @@
 #include <iostream>
 #include <cstring>
+#include <vector>
+#include <iterator>
 using namespace std;
 
 void CLEAR(){
@@ -12,6 +14,8 @@ void CLEAR(){
 
 #include "src/ToolsAux.cpp"
 #include "src/usuario.cpp"
+#include "src/ParticionamientoEstatico.cpp"
+#include "src/ParticionamientoDinamico.cpp"
 #include "src/metodosMemoria.cpp" 
 #include "src/sistema.cpp"
 #include "src/menu.cpp"
