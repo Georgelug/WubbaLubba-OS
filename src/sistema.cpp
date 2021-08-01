@@ -2,6 +2,7 @@ class Sistema{
     
     public:
         ParticionamientoEstatico partEst;
+        ParticionamientoDinamico partDina;
         Sistema(){}
         string Bienvenida(){
             return "\n\n\t\aWubbaLubba-OS verion 1.0.0\n\nCopyleft 2021 Autor: Jorge Luis Esparza Fuentes\n\nEl uso de este sistema operativo queda libre a todo usuario sin fines de lucro\n\nqueda prohibida su venta o distribucion\n\n";
@@ -58,6 +59,7 @@ class Sistema{
                         break;
                     case 2:
                         cout << "\n\n\t Ingresando a PARTICIONAMIENTO DINAMICO"<< endl;
+                        partDina.inicio();
                         break;
                     case 3:
                         cout << "\n\n\t Ingresando a PAGINACION"<< endl;

@@ -148,7 +148,7 @@ class ParticionamientoEstatico{
                 for(i = 0 ; i< ram.size() ; i++){
                     CLEAR();
                     t.showRAM(tmpRam);
-                    cout << "\n\t Proceso anterior ingresado: " << tmpProceso <<endl;
+                    cout << "\n\t Proceso anterior ingresado: " << tmpProceso << " MB" << endl;
                     cout << "\n\n\tParticion " << i+1 << endl;
                     tmpProceso = t.verificar(0,2048,"Ingresa un proceso en MB: ");
                     cout << ((asignarProceso(tmpProceso) == true)? "Proceso ingresado a la RAM" : "Memoria insuficiente") << endl;
@@ -167,7 +167,7 @@ class ParticionamientoEstatico{
             res = t.verificar(1,2,"\n\n\tPresiona (1) para iniciar el programa o (2) para salir");
             while(res == 1){
                 CLEAR();
-                cout << "\n\n\tPARTICIONAMIENTO Estatico";
+                cout << "\n\n\tPARTICIONAMIENTO ESTATICO";
                 configuracionInicial();
                 CLEAR();
                 simulacion();
