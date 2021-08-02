@@ -12,8 +12,10 @@ void CLEAR(){
     #endif
 }
 
+#include "src/Pagina.cpp"
 #include "src/ToolsAux.cpp"
 #include "src/usuario.cpp"
+#include "src/Paginacion.cpp"
 #include "src/ParticionamientoEstatico.cpp"
 #include "src/ParticionamientoDinamico.cpp"
 #include "src/metodosMemoria.cpp" 

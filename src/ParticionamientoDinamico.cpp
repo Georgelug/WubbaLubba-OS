@@ -43,8 +43,8 @@ class ParticionamientoDinamico{
                 while(true){
                     CLEAR();
                     t.showRAM(ram);
-                    cout << "\n\n\tMemoria restante: " << tmpProcesos << " MB\tProceso interior ingresado: " << tmpProceso << " MB" << endl;
-                    tmpProceso = t.verificar(1,2048,"\n\n\tIngresa un proceso en MB: ");
+                    cout << "\n\n\tMemoria restante: " << tmpProcesos << " kB\tProceso interior ingresado: " << tmpProceso << " kB" << endl;
+                    tmpProceso = t.verificar(1,2048,"\n\n\tIngresa un proceso en kB: ");
                     tmpProcesos -= tmpProceso;
                     flag = asignarProceso(tmpProceso, tmpProcesos);
                     if(flag == false || tmpProceso < 1){

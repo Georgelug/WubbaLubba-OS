@@ -67,11 +67,11 @@ class ParticionamientoEstatico{
                 this->numParticiones = t.verificar(1,128,"\n\n\tNumero de particiones (minimo una, maximo 128): ");
                 system("pause");
                 CLEAR();
-                cout << "\n\n\tIngresa en MB el espacio requerido para cada particion\n" << endl;
+                cout << "\n\n\tIngresa en kB el espacio requerido para cada particion\n" << endl;
                 
                 while(cont < this->numParticiones){
                     cout << "\n\n\tParticion " << cont << "\n\n\tEspacio sin particionar disponible: " << tmpEspacio << endl;
-                    tmpsize = t.verificar(1,tmpEspacio,"Ingresa en MB el espacio para esta particion: ");
+                    tmpsize = t.verificar(1,tmpEspacio,"Ingresa en kB el espacio para esta particion: ");
                     tmpEspacio -= tmpsize;
                     ram.push_back(tmpsize);
                     ramFragmentada.push_back(false);
@@ -148,9 +148,9 @@ class ParticionamientoEstatico{
                 for(i = 0 ; i< ram.size() ; i++){
                     CLEAR();
                     t.showRAM(tmpRam);
-                    cout << "\n\t Proceso anterior ingresado: " << tmpProceso << " MB" << endl;
+                    cout << "\n\t Proceso anterior ingresado: " << tmpProceso << " kB" << endl;
                     cout << "\n\n\tParticion " << i+1 << endl;
-                    tmpProceso = t.verificar(0,2048,"Ingresa un proceso en MB: ");
+                    tmpProceso = t.verificar(0,2048,"Ingresa un proceso en kB: ");
                     cout << ((asignarProceso(tmpProceso) == true)? "Proceso ingresado a la RAM" : "Memoria insuficiente") << endl;
                     system("pause");
                     

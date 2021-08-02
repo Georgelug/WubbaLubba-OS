@@ -10,7 +10,7 @@ class Herramientas{
             
             do{
 
-                cout << frase <<endl;
+                cout << frase <<"\n\t: ";
                 getline(cin,tmp);
                 try{
                     opc = stoi(tmp);
@@ -41,6 +41,18 @@ class Herramientas{
                 cout <<"\t-----------------"<<endl;
                 cont++;
             }
-        }   
+        }
+        
+        void showRAM(vector <Pagina> ram,int num){
+            // vector <int> :: iterator e;
+            // int cont = 1;
+            // cout <<"particion      MB"<<endl;
+            // cout <<"\t-----------------"<<endl;
+            // for(e = ram.begin() ; e != ram.end() ; ++e){
+            //     cout << cont << "\t|\t" << *e << "\t|" << endl;
+            //     cout <<"\t-----------------"<<endl;
+            //     cont++;
+            // }
+        }
         
 };
