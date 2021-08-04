@@ -73,7 +73,8 @@ class User{
         void nuevoUsarioPswd(){
             string tmpuser,tmppswd,tmppswdConfirm;
 
-            cin.ignore();
+
+            // cin.ignore();
             cout << "\n\n\tIngresa un nuevo usuario: ";
             getline(cin,tmpuser);
 
@@ -83,20 +84,20 @@ class User{
                 getline(cin,tmpuser);
             }
 
-            cin.ignore();
+            // cin.ignore();
             cout << "\n\n\tIngresa un nuevo password: ";
             getline(cin,tmppswd);
 
-            cin.ignore();
+            // cin.ignore();
             cout << "\n\n\tConfirma el nuevo password: ";
             getline(cin,tmppswdConfirm);
 
             while (tmppswd.empty() || tmppswdConfirm.empty() || tmppswd.compare(tmppswdConfirm)!= 0){
-                cin.ignore();
+                // cin.ignore();
                 cout << "\n\n\tERROR, intentalo de nuevo\n\tIngresa un nuevo password: ";
                 getline(cin,tmppswd);
                 
-                cin.ignore();
+                // cin.ignore();
                 cout << "\n\n\tConfirma el nuevo password: ";
                 getline(cin,tmppswdConfirm);
             }

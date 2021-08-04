@@ -8,7 +8,6 @@ class Segmentacion {
     public:
         Herramientas t;
         vector <ProcesoSegmento> ram;
-        vector <ProcesoSegmento> :: iterator e;
 
     public:
         //constructor
@@ -26,7 +25,7 @@ class Segmentacion {
         }
 
         bool asignarProceso(int proceso , int tmpProcesos){
-            if(tmpProcesos < 1) return false;
+            if(tmpProcesos < 0) return false;
 
             ProcesoSegmento tmp(proceso);
             ram.push_back(tmp);
@@ -48,7 +47,7 @@ class Segmentacion {
                     tmpProceso = t.verificar(1,3072,"\n\n\tIngresa un proceso en kB: ");
                     tmpProcesos -= tmpProceso;
                     flag = asignarProceso(tmpProceso, tmpProcesos);
-                    if(flag == false || tmpProceso < 1){
+                    if(flag == false || tmpProceso < 0){
                         cout << "\n\n\tMemoria insuficiente" << endl;
                         break;
                     }

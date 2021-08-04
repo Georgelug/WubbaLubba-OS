@@ -1,3 +1,9 @@
+/*
+Autor: Jorge Luis Esparza Fuentes
+Proyecto: Examen 1 manejo de la memoria
+Version: 1.0.0
+Profesor: ing. Cruz Sergio Aquilar Diaz
+*/ 
 #include <iostream>
 #include <cstring>
 #include <vector>

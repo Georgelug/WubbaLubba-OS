@@ -78,6 +78,7 @@ class Sistema{
             void leerBuffer(string ruta){
                 string instruccion;
                 int opciones;
+                cout << "Presiona cualquier tecla para continuar" << endl;
                 cin.ignore();
 
                 while(true){

@@ -76,8 +76,6 @@ class Paginacion{
                 CLEAR();
                 Pagina tmp(this->sizePagina);
                 ram.push_back(tmp);
-                cout << "\n\n\ttamanio: " << (this->ram.back()).getEspacio() << " libre: " << (this->ram.back()).getOcupada() << " Proceso: " << (this->ram.back()).getProceso() << endl;
-                cout << "\n\tMarco " << i+1 << " creado"<< endl;
                 cont++;
             }
             if(ram.empty()){
