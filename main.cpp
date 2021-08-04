@@ -13,6 +13,7 @@ void CLEAR(){
     #endif
 }
 
+#include "src/ProcesoSegmento.cpp"
 #include "src/Pagina.cpp"
 #include "src/ToolsAux.cpp"
 #include "src/usuario.cpp"
@@ -29,7 +30,7 @@ int main(){
     system("pause");
     CLEAR();
 
-    // funcion menu, la cual abre el menu principal
+    // funcion menu, la cual abre el buffer principal y entabla comunicaciones con las clasees de usuario y sistema
     menu();
 
     return 0;

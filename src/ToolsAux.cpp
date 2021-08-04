@@ -52,5 +52,17 @@ class Herramientas{
                 cout <<"\t-----------------"<<endl;
             }
         }
+        void showRAM(vector <ProcesoSegmento> ram,int num,int num2){
+            int i;
+            cout <<"Proceso        kB"<<endl;
+            cout <<"\t-----------------"<<endl;
+            for(i = 0 ; i< ram.size() ; i++){
+                cout << i+1 << "\t|   \t" << (ram.at(i)).getProceso() << "\t|" << endl;
+                cout << " \t|SD:\t " << (ram.at(i)).getDatos() << "\t|" << endl;
+                cout << " \t|SC:\t " << (ram.at(i)).getCodigo() << "\t|" << endl;
+                cout << " \t|SP:\t " << (ram.at(i)).getPila() << "\t|" << endl;
+                cout <<"\t-----------------"<<endl;
+            }
+        }
         
 };
