@@ -1,12 +1,14 @@
 class Pagina{
     private:
-        bool ocupada = false;
-        int proceso = 0; 
+        bool ocupada;
+        int proceso; 
         int espacio;
 
     public:
         Pagina(int espacio){
             this->espacio = espacio;
+            this->ocupada = false;
+            this->proceso = 0;
         }
 
         // getters & setters
@@ -24,5 +26,11 @@ class Pagina{
                 this->espacio -= proceso;
                 setOcupada(true);
             }
+        }
+        
+        void vaciarPagina(int espacio){
+            this->espacio = espacio;
+            this->ocupada = false;
+            this->proceso = 0;
         }
 };

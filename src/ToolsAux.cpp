@@ -34,7 +34,7 @@ class Herramientas{
         void showRAM(vector <int> ram){
             vector <int> :: iterator e;
             int cont = 1;
-            cout <<"particion      MB"<<endl;
+            cout <<"particion      kB"<<endl;
             cout <<"\t-----------------"<<endl;
             for(e = ram.begin() ; e != ram.end() ; ++e){
                 cout << cont << "\t|\t" << *e << "\t|" << endl;
@@ -44,15 +44,13 @@ class Herramientas{
         }
         
         void showRAM(vector <Pagina> ram,int num){
-            // vector <int> :: iterator e;
-            // int cont = 1;
-            // cout <<"particion      MB"<<endl;
-            // cout <<"\t-----------------"<<endl;
-            // for(e = ram.begin() ; e != ram.end() ; ++e){
-            //     cout << cont << "\t|\t" << *e << "\t|" << endl;
-            //     cout <<"\t-----------------"<<endl;
-            //     cont++;
-            // }
+            int i;
+            cout <<"Pagina        kB"<<endl;
+            cout <<"\t-----------------"<<endl;
+            for(i = 0 ; i< ram.size() ; i++){
+                cout << i+1 << "\t|\t" << (ram.at(i)).getProceso() << "\t|" << endl;
+                cout <<"\t-----------------"<<endl;
+            }
         }
         
 };

@@ -2,6 +2,7 @@
 #include <cstring>
 #include <vector>
 #include <iterator>
+#include <cmath>
 using namespace std;
 
 void CLEAR(){
@@ -15,6 +16,7 @@ void CLEAR(){
 #include "src/Pagina.cpp"
 #include "src/ToolsAux.cpp"
 #include "src/usuario.cpp"
+#include "src/Segmentacion.cpp"
 #include "src/Paginacion.cpp"
 #include "src/ParticionamientoEstatico.cpp"
 #include "src/ParticionamientoDinamico.cpp"
